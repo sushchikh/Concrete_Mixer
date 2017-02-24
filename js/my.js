@@ -85,11 +85,30 @@ window.onload=function(){
       // i++;
       $(this).find("input").val("");
       alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-      $('.form_container').removeClass('show_form_container');
+      $('.hidden_form_container').removeClass('show_form_container');
+      $('.hidden_form_wrapper').removeClass('show_form_container');
     });
     return false;
 
   });
+
+
+  $("#form_hidden").submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function() {
+      // i++;
+      $(this).find("input").val("");
+      alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+      $('.hidden_form_container').removeClass('show_form_container');
+      $('.hidden_form_wrapper').removeClass('show_form_container');
+    });
+    return false;
+
+  });
+
 
 
   $('.button').bind('click', function(){
@@ -97,5 +116,12 @@ window.onload=function(){
   })
   $('.close').bind('click', function(){
     $('.hidden_form_container').removeClass('show_form_container');
+  })
+
+  $('.button').bind('click', function(){
+    $('.hidden_form_wrapper').addClass('show_form_container');
+  })
+  $('.close').bind('click', function(){
+    $('.hidden_form_wrapper').removeClass('show_form_container');
   })
 

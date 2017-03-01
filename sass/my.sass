@@ -53,9 +53,10 @@ body
 	background-image: url('../img/header/mixer.png')
 	background-repeat: no-repeat
 	background-position: 20px 50px
-	&:hover .header_order_btn
-		-webkit-animation: pulse .3s 1 ease
-		animation: pulse .3s 1 ease	
+	&:hover .rotate
+	// &:hover .header_order_btn
+	// 	-webkit-animation: pulse .3s 1 ease
+	// 	animation: pulse .3s 1 ease	
 	@media only screen and (max-width: 1120px)
 		background-image: none
 		padding: 0px
@@ -105,7 +106,7 @@ body
 		text-align: center
 	
 .header_container
-	padding: 100px 40px
+	padding: 0px 40px
 	text-align: right
 	position: relative
 
@@ -132,27 +133,50 @@ body
 
 .header_title
 	font-size: 80px
-	-webkit-animation: rotateIn 1s 1 ease
-	animation: rotateIn 1s 1 ease		
+	position: relative
+	top: -20px	
 	@media only screen and (max-width: 1120px)
 		width: 100%
+		top: 0px
+	@media only screen and (max-width: 500px)
+		top: 0px
+
+.tought
+	display: none
+	-webkit-animation: rotateIn 1s 1 ease 
+	animation: rotateIn 1s 1 ease
+	@media only screen and (max-width: 1000px)
+		display: inline-block
+ 
+
+.rotate
+	margin: 0px -6px 0px 
+	position: relative
+	display: inline-block
+	-webkit-animation: rotateIn 2s 1 ease 
+	animation: rotateIn 2s 1 ease 
+	@media only screen and (max-width: 1000px)
+		display: none
 
 .header_subtitle
-	margin-top: 100px
+	margin-top: 10px
 	font-size: 35px
-	-webkit-animation: bounce 1s .7s 1 ease
-	animation: bounce 1s .7s 1 ease		
+	-webkit-animation: bounce 1s 2s 1 ease
+	animation: bounce 1s 2s 1 ease		
 	@media only screen and (max-width: 1100px)
 		margin-top: 0px
 .header_price
 	color: red
 	font-size: 30px
 	font-weight: 500
+	position: relative
+	left: 8px
+	top: 5px
 .header_order_btn
 	display: inline-block
 	position: relative
-	left: 10px
-	margin-top: 50px
+	left: -50px
+	margin-top: 10px
 	width: 300px
 	height: 50px
 	line-height: 50px
@@ -166,6 +190,42 @@ body
 	@media only screen and (max-width: 330px)
 		width: 100%
 
+.header_offer_container
+	text-align: right
+	width: 550px
+	display: block
+	margin: 5px 0px 10px auto
+	@media only screen and (max-width: 1100px)
+		width: 100%
+		text-align: center
+	img
+		margin-top: 30px
+		display: block
+		max-width: 600px
+		@media only screen and (max-width: 1100px)
+			margin: 10px auto 0px
+.header_offer_title
+	font-size: 30px
+	position: relative
+	color: red
+.header_offer_title_plus
+	font-weight: 300
+	position: relative
+	left: -10px
+	top: 2px
+	@media only screen and (max-width: 1100px)
+		left: 0px
+.header_offer_title_text
+	font-weight: 500
+.header_offer_subtitle
+	font-size: 15px
+	display: none
+.countdown_container
+	width: 400px
+	margin: 10px 0px 10px auto
+	text-align: center
+	@media only screen and (max-width: 1100px)
+		width: 100%
 
 //  #######  ######## ######## ######## ########
 // ##     ## ##       ##       ##       ##     ##
@@ -183,6 +243,7 @@ body
 	border-radius: 20px
 	padding-top: 20px
 	padding-bottom: 20px
+	display: none
 	@media only screen and (max-width: 1100px)
 		width: 100%
 		padding-top: 30px
@@ -224,6 +285,8 @@ body
 .countdown_title
 	text-align: center
 	font-size: 30px
+	position: relative
+	top: 15px
 
 .offer_order_btn
 	display: block
@@ -257,8 +320,8 @@ body
 	margin: 0 auto
 	text-align: center
 	margin: 0 auto
-	width: 800px
-	height: 130px
+	width: 100%
+	height: 110px
 	position: relative
 	@media only screen and (max-width: 900px)
 		width: 100%
@@ -597,8 +660,8 @@ button
 	from 
 		-webkit-transform-origin: center
 		transform-origin: center
-		-webkit-transform: rotate3d(0, 0, 1, -200deg)
-		transform: rotate3d(0, 0, 1, -200deg)
+		-webkit-transform: rotate3d(0, 0, 1, -600deg)
+		transform: rotate3d(0, 0, 1, -600deg)
 		opacity: 0
   
 
@@ -613,8 +676,8 @@ button
 	from 
 		-webkit-transform-origin: center
 		transform-origin: center
-		-webkit-transform: rotate3d(0, 0, 1, -200deg)
-		transform: rotate3d(0, 0, 1, -200deg)
+		-webkit-transform: rotate3d(0, 0, 1, -600deg)
+		transform: rotate3d(0, 0, 1, -600deg)
 		opacity: 0
   
 

@@ -44,7 +44,7 @@ CountdownTimer.prototype={
 function CDT(){
 
  // Set countdown limit
- var tl = new Date('2017/03/09 00:00:00');
+ var tl = new Date('2018/05/09 00:00:00');
 
  // You can add time's up message here
  var timer = new CountdownTimer('CDT',tl,'<span class="number-wrapper"><div class="line"></div><span class="number end">Время действия акции закончилось =(</span></span>');

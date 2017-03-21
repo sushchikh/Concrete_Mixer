@@ -116,7 +116,7 @@ window.onload=function(){
   })
   $('.close').bind('click', function(){
     $('.hidden_form_container').removeClass('show_form_container');
-  })
+  });
 
   $('.button').bind('click', function(){
     $('.hidden_form_wrapper').addClass('show_form_container');
@@ -125,3 +125,11 @@ window.onload=function(){
     $('.hidden_form_wrapper').removeClass('show_form_container');
   })
 
+  $('.callback_button').bind('click', function(){
+    $('.hidden_form_wrapper').addClass('show_form_container');
+  })
+  $('.callback_button').bind('click', function(){
+    $('.hidden_form_container').addClass('show_form_container');
+  })
+
+// ребята, сорри за это, делал пьяный на велосипеде с костылями, это просто пиздец, больше такого не делаю, честно, это один из первых сайтов
